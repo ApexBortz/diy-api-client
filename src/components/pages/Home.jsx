@@ -26,9 +26,10 @@ const Home = () => {
 
     },[] )
 
+    // form submit handler
     const handleSubmit = async(e, form, setForm) => {
         e.preventDefault()
-
+        // prevent default
         try {
             const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/blog`, form)
             // add this new blogpost to state

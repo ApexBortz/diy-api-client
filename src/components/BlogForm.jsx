@@ -19,8 +19,8 @@ const BlogForm = ({ handleSubmit, initialForm }) => {
                        onChange={e => setForm({...form, title: e.target.value})} />
 
                 <label htmlFor='content'>Your content: </label>
-                <input type='text' id='content' 
-                       value={form.client} 
+                <textarea type='text' id='content' rows='5' cols='20'
+                       value={form.content} 
                        onChange={e => setForm({...form, content: e.target.value})} />
                 
                 <button type='submit'> Submit </button>
