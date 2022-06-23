@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './components/pages/Home';
-import BlogPost from './components/pages/BlogPost';
+import Blog from './components/pages/Blog';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Routes>
             <Route path='/' element={<Home />} />
 
-            <Route path='/blog/:id' element={<BlogPost />} />
+            <Route path='/blog/:id' element={<Blog />} />
         </Routes>
 
       </main>

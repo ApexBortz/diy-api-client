@@ -6,20 +6,20 @@ import BlogForm from '../BlogForm'
 const Home = () => {
 
     const [ blogs, setBlogs ] = useState([])
-
-    const [ error, setError ] = useState('')
+    const [ setError ] = useState('')
 
     useEffect(() => {
-
+        // get all blog posts
         const fetchBlogposts = async () => {
             try {
                 const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/blog`)
-
+                // set blogs to the response data we get from the db
                 setBlogs(response.data)
-                console.log(response.data)
+                // console.log(response.data)
 
             } catch(error) {
-                console.log('nope', error)
+                console.log('NOPE', error)
+                Response.status(500).json({ message: 'server error' })
             }
         }
         fetchBlogposts()
